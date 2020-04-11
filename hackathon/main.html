@@ -26,16 +26,16 @@
         margin: 0;
         padding: 14px;
       }
-      h3 {
+      /*h3 {
         color: black;
         font-size: 20px;
         margin-top: 3px;
-        text-align: center;
-      }
+        text-align: left;
+      }*/
       #chatbox {
         margin-left: auto;
         margin-right: auto;
-        width: 40%;
+        width: 60%;
         margin-top: 60px;
       }
       #userInput {
@@ -131,15 +131,15 @@
           <!-- <p class="botText">
             <span>Hi! I'm Candice your personal ChatBot ❤️</span>
           </p> -->
-                <div class="alert alert-primary " >
-            <h3><font size="4">
-              
-            
-        Hi! Nice to meet you "Name" 
-        </font>
+          <div class="row justify-content-start">
+            <div class="col-8">
+              <div class="alert alert-primary text-center" >
+            <h3><font size="4">Hi! Nice to meet you "Name" </font>
             </h3>
-            
+            </div>
+            </div>
           </div>
+                
         </div>
         <div id="userInput">
           <!-- <input id="textInput" type="text" name="msg" placeholder="Message" /> -->
@@ -155,7 +155,7 @@
       <script>
         function getBotResponse() {
           var rawText = $("#textInput").val();
-          var userHtml = '<div class="alert alert-success text-right"><h3><font size="4">' + rawText + "</font></h3></div>";
+          var userHtml = '<div class="row justify-content-end"><div class="col-8"><div class="alert alert-success text-center"><h3><font size="4">' + rawText + "</font></h3></div></div></div>";
           $("#textInput").val("");
           $("#chatbox").append(userHtml);
           document
