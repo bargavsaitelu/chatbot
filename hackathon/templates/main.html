@@ -32,7 +32,7 @@
         width: 100%;
         border: none;
         border-bottom: 3px solid black;
-        font-size: 17px;
+        font-size: 20px;
       }
       
       #tidbit {
@@ -41,31 +41,70 @@
         right: 0;
         width: 300px;
       }
+      /*.alert{
+        display: inline-block;
+        width: 100%;
+        float: right;
+        text-align: right;
+
+      }*/
+      /*.shadow{
+          display: inline-block;
+          float: left;
+          text-align: left;
+        }*/
+        .botclass{
+          display: inline-block;
+          float: left;
+          text-align: left;
+        }
+        .userclass{
+        display: inline-block;
+        /*width: 100%;*/
+        float: right;
+        text-align: right;
+
+      }
+
+
+
+  body {
+ 
+  background-color: #F2F3F4     ;
+  
+}
+}
       
     </style>
   </head>
-  <body>
+  <body >
+    
     <div class="container">
       <br>
-    <div class="alert alert-info text-center" >
+      <center>
+    <div class="shadow p-2 mb-5 alert alert-info  rounded text-center" >
       <h2>
-  Some instructions about the bot
+  For Health Checkup <a href="test" target="_blank">Click Here</a> 
       </h2>
       
     </div>
+    </center>
       <div>
         <div id="chatbox">
           <div class="row justify-content-start">
-            <div class="col-8">
-              <div class="alert alert-primary text-center" >
-            <h3><font size="4">Hi! Nice to meet you "Name" </font>
+            <div class="col-6">
+              <div class="botclass">
+              <div class="shadow p-1 mb-3 alert alert-danger  rounded text-center" >
+            <h3><font size="4">Hi! Nice to meet you {{ name }} </font>
             </h3>
-            </div>
+            </div>  
+              </div>
+              
             </div>
           </div>
                 
         </div>
-        <div id="userInput">
+        <div id="userInput" >
           <!-- <input id="textInput" type="text" name="msg" placeholder="Message" /> -->
           <form>
     <div class="form-group ">
@@ -76,12 +115,14 @@
   </form>
         </div>
       </div>
+
       <script>
         function getBotResponse() {
           var rawText = $("#textInput").val();
-          var userHtml = '<div class="row justify-content-end"><div class="col-8"><div class="alert alert-success text-center"><h3><font size="4">' + rawText + "</font></h3></div></div></div>";
+          var userHtml = '<div class="row justify-content-end"><div class="col-6"><div class="userclass"><div class="shadow p-1 mb-3 alert alert-warning rounded text-right"><h3><font size="4">' + rawText + "</font></h3></div></div></div></div>";
+          
           $("#textInput").val("");
-          $("#chatbox").append(userHtml);
+          if(rawText != '')$("#chatbox").append(userHtml);
           document
             .getElementById("userInput")
             .scrollIntoView({ block: "start", behavior: "smooth" });
@@ -100,5 +141,6 @@
         });
       </script>
     </div>
+ 
   </body>
 </html>
