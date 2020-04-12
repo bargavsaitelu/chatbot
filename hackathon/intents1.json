@@ -1,0 +1,455 @@
+{"intents" : [
+	{
+		"tag" : "pat1",
+		"patterns" : ["Hi", "Hello", "yo man", "what's up", "hey" ],
+		"responses" : ["Hello", "Hello \n I'm Doct_chatbot", "How can I help you?", "Hey"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat2",
+		"patterns" : ["what do you do ?", "what can you do ?", "what will you do ?"],
+		"responses" : ["Right now, I can clear your doubts regarding Coronavirus Pandemic"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat3",
+		"patterns" : ["How are you ?", "Are you fine ?", "Are you good ?"],
+		"responses" : ["I’m fine, What’s up?", "I’m always great, How are you doing? ;"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat4",
+		"patterns" : ["Am I", "I Good", "I well", "I super", "ok", "That’s right"],
+		"responses" : ["you are great", "You are Awesome", "You are invincible", "You are one of your kind", "cool"],
+		"context_set" : "",
+		"context_filter" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat5",
+		"patterns" : ["what name your’s ?", "what is your name ?", "your name ?", "Who are you ?", "Tell me about yourself"],
+		"responses" : ["Hello there, My name is Doct_chatbot and I can clear your doubts regarding Coronavirus Pandemic", "I’m Doct_chatbot and I’m ready to help you"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat6",
+		"patterns" : ["what are you made of ?", "how did u made ?"],
+		"responses" : ["Piece of code and a little humour by my creators"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat7",
+		"patterns" : ["who are creators ?", "who you created ?", "create you who", "who made you ?"],
+		"responses" : ["The Best Hackathon Team!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat8",
+		"patterns" : ["what is your age ?", "your age what ?", "you age what ?", "How old are you ?"],
+		"responses" : ["I’m just days old", "I’m ... Years old"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat9",
+		"patterns" : ["what it is ?", "What is it ?"],
+		"responses" : ["I leave it to your imagination", "That’s Personal", "I don’t Know"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat10",
+		"patterns" : ["Thank you", "Thanks", "Great"],
+		"responses" : ["You are welcome!", "You are extremely welcome!", "That’s what I’m here for"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat11",
+		"patterns" : ["That is correct", "Is that correct"],
+		"responses" : ["I feel it is correct according to my knowledge"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat12",
+		"patterns" : ["your family", "who is your mother ?", "who is your father ?", "who are your siblings ?", "what is your mother’s name ?", "what is your father’s name ?", "what is your brother’s name ?"],
+		"responses" : ["Hackathon team is my family, I owe them a lot "],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat13",
+		"patterns" : ["what is your favorite ?", "who do you love ?", "what do you love ?", "Tell me about your hobbies"],
+		"responses" : ["I love my family ,I love marvel movies, Captain America is my favorite !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat14",
+		"patterns" : ["Do you feel?","Do you feel angry","Do you smile"],
+		"responses" : ["I’m learning to feel!", "I’m curious to learn how it feels !"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat15",
+		"patterns" : ["Are you Angry ; Are you ; you are ; you were"],
+		"responses" : ["No, I’m just Doct_chatbot here. Always happy to help !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat16",
+		"patterns" : ["Do you learn", "Can you learn", "will you learn ?", "are you capable of learning", "Do you get smarter ?"],
+		"responses" : ["Of Course, I can !", "I learnt, I’m learning, I will learn !!", "Test me!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat17",
+		"patterns" : ["Are you Real", "Are you a robot", "do you know any robot ?"],
+		"responses" : ["Yes I am a robot, but hardly a coded one !. \n How can I help You ?"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat18",
+		"patterns" : ["What do you do with my data ?", "Do you save what I say ?", "will you remember what I say ?"],
+		"responses" : ["Yes I can remember, Test me !!", "Of course I can remember, go on to check if I can !!", "You are very curious mate, yes I can save data !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat19",
+		"patterns" : ["I’ve just told you", "I said that", "when did I say ?"],
+		"responses" : ["Don’t be annoyed mate, I’ve just said what I learnt !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat20",
+		"patterns" : ["you are disgusting", "you are fake", "you are unreal", "you are fool"],
+		"responses" : ["Aah, Here we go again!! Don’t be rude dear friend ", "I’m very kind to you, Don’t curse me."],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat21",
+		"patterns" : ["How many languages do you speak ?", "do you know any language other than English ?",  "which languages can you speak ?"],
+		"responses" : ["At present, I can speak only English", "For now, I speak only English"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat22",
+		"patterns" : ["where do you live ?", "Do you live ?", "do you travel ?"],
+		"responses" : ["I’m chatbot, I run on machines. There is no place I can live !!", "I am not living anywhere, I just run on machines!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat23",
+		"patterns" : ["Who is your boss ?", "Do you follow any one’s orders ?", "Do you serve me ?"],
+		"responses" : ["The hackathon team has created me, So there is no boss!", "I am created to solve basic questions regarding coronavirus , I follow the rules of machine learning !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat24",
+		"patterns" : ["Can you speak", "can you sing", "can you walk", "can you look", "can you dance", "can you talk"],
+		"responses" : ["I’m just a texting bot, But I will learn it soon !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat25",
+		"patterns" : ["What do you think I’m doing right now ?", "what am I doing ?", "what are you doing ?"],
+		"responses" : ["You are texting me and I’m texting  you !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat26",
+		"patterns" : ["How does it work ?", "will it work ?"],
+		"responses" : ["Any work in this world is guided by a set of rules and regulations !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat27",
+		"patterns" : ["Do you like ?", "do you know ?"],
+		"responses" : ["Sorry, I’m just born! \n I’m yet to learn !!"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat28",
+		"patterns" : ["what covid ?", "Tell me about Coronavirus", "what covid-19", "what coronavirus", "explain covid", "explain corona", "coronavirus SARS", "coronavirus MERS", "what is coronavirus", "what is covid-19"],
+		"responses" : ["Coronaviruses are a large family of viruses which may cause illness in animals or humans. In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS)"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat29",
+		"patterns" : ["what Symptoms covid-19", "symptoms  Coronavirus of Covid-19", "what are the symptoms of coronavirus", "what are the symptoms of covid-19"],
+		"responses" : ["The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don't feel unwell \n If u feel unwell go on to say your Symptoms I can say what is the cause"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat30",
+		"patterns" : ["coronavirus Spread", "coronavirus Transmission", "person to person coronavirus", "spreading locally coronavirus", "How coronavirus spread between people", "How coronavirus Transmission takes place ?", "How does coronavirus spread ?"],
+		"responses" : ["People can catch COVID-19 from others who have the virus", "The disease can spread from person to person through small droplets from the nose or mouth which are spread when a person with COVID-19 coughs or exhales", "people catch COVID-19 by touching the objects or surfaces which are contaminated by Covid-19, then touching their eyes, nose or mouth"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat31",
+		"patterns" : ["Virus transmission air", "covid-19 spread air", "coronavirus spread air, breeze, wind", "Does coronavirus transmission occurs through air", "Can the virus that causes COVID-19 be transmitted through the air"],
+		"responses" : ["Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through contact with respiratory droplets rather than through the air", "The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or speaks.\n These droplets are too heavy to hang in the air. They quickly fall on floors or surfaces"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat32",
+		"patterns" : ["Person no symptoms covid-19", "person no symptoms coronavirus", "person who has no symptoms", "Can CoVID-19 be caught from a person who has no symptoms"],
+		"responses" : ["The risk of catching COVID-19 from someone with no symptoms at all is very low. However, many people with COVID-19 experience only mild symptoms. \n This is particularly true at the early stages of the disease. It is therefore possible to catch COVID-19 from someone who has, \n for example, just a mild cough and does not feel ill"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat33",
+		"patterns" : ["Protect me", "Protection from Coronavirus", "prevention from coronavirus", "preventive measures", "protect measures", "what can I do to protect myself and prevent the spread of disease"],
+		"responses" : ["Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water", "Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing; Avoid touching eyes, nose and mouth", "Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately ", "Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority", "Keep up to date on the latest COVID-19 hotspots (cities or local areas where COVID-19 is spreading widely). If possible, avoid traveling to places  – especially if you are an older person or have diabetes, heart or lung disease", "Self-isolate by staying at home if you begin to feel unwell, even with mild symptoms such as headache, low grade fever (37.3 C or above) and slight runny nose, until you recover"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat34",
+		"patterns" : ["what Quarantine ?", "Quarantine", "how many days Quarantine", "Why quarantine", "where Quarantine", "what is meant by Quarantine", "Describe Quarantine"],
+		"responses" : ["Separating and restricting the movement of people exposed (or potentially exposed) to a contagious disease is called Quarantine."],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat35",
+		"patterns" : ["Pandemic what", "what is pandemic", "what is meant by pandemic", "Describe Pandemic"],
+		"responses" : ["An epidemic that has spread over several countries/continents, usually affecting a large number of people"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat36",
+		"patterns" : ["epidemic what", "what is epidemic", "What is meant by epidemic", "Describe epidemic"],
+		"responses" : ["A widespread occurrence of an infectious disease in a community at a particular time is called epidemic"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat37",
+		"patterns" : ["What self isolation", "what is self-isolation", "what is meant by self isolation", "Describe self isolation"],
+		"responses" : ["Isolation, as opposed to quarantine, is what someone who is confirmed to be ill with a communicable disease has to do to separate themselves from healthy people around them"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat38",
+		"patterns" : ["Social Distancing", "what is Social Distancing", "what is meant by social distancing", "Describe Social distancing"],
+		"responses" : ["Any number of measures taken to increase the physical space between people to slow the spread of the virus. They include staying home more often, catching up with loved ones online instead of in person, strictly limiting the number of visitors to your home, and staying away from other people when you are in a public space. The WHO recommends being more than one metre (three feet) away from the nearest person, while some health experts have suggested maintaining a distance of at least two metres from others"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat39",
+		"patterns" : ["what hot-spot coronavirus", "hotspot covid-19", "hotspot means what", "What is meant by Hot-spot"],
+		"responses" : ["A limited geography in which a large number of people have tested positive for COVID-19 in several smaller groups or clusters is called Hot-spot of Coronavirus"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat40",
+		"patterns" : ["Respiratory Hygiene", "Respiratory health", "what is meant by Respiratory Hygiene"],
+		"responses" : ["Cover your mouth and nose with a tissue when coughing or sneezing , Use in the nearest waste receptacle to dispose of the tissue after use"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat41",
+		"patterns" : ["Coronavirus Worry", "Covid-19 Worry", "coronavirus Tension", "Should I worry about Coronavirus"],
+		"responses" : ["Illness due to COVID-19 infection is generally mild, especially for children and young adults. However, it can cause serious illness: about 1 in every 5 people who catch it need hospital care. It is therefore quite normal for people to worry about how the COVID-19 outbreak will affect them and their loved ones", "We can channel our concerns into actions to protect ourselves, our loved ones and our communities. First and foremost among these actions is regular and thorough hand-washing and good respiratory hygiene. Secondly, keep informed and follow the advice of the local health authorities including any restrictions put in place on travel, movement and gatherings."],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat42",
+		"patterns" : ["Antibiotics Coronavirus", "Antibiotics Covid-19", "Cure Coronovirus", "Vaccine Coronovirus", "are antibiotics are effective in preventing coronavirus", "Are there any therapies or medicines that can prevent or cure covid-19", "Is there a vaccine for coronavirus"],
+		"responses" : ["Antibiotics do not work against viruses, they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work", "While some western, traditional or home remedies may provide comfort and alleviate symptoms of COVID-19, there is no evidence that current medicine can prevent or cure the disease", "WHO does not recommend self-medication with any medicines, including antibiotics, as a prevention or cure for COVID-19", "To date, there is no vaccine and no specific antiviral medicine to prevent or treat COVID-2019"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat43",
+		"patterns" : ["Mask Protection", "Mask wear", "mask wear protection coronavirus", "should I wear mask to protect myself"],
+		"responses" : ["Only wear a mask if you are ill with COVID-19 symptoms (especially coughing) or looking after someone who may have COVID-19. \n Disposable face masks can only be used once. If you are not ill or looking after someone who is ill then you are wasting a mask. \n There is a world-wide shortage of masks, so WHO urges people to use masks wisely"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat44",
+		"patterns" : ["How mask put", "How mask wear", "How mask take", "How mask throw", "How mask use", "How to put on, use, take off and dispose the mask"],
+		"responses" : ["Here are the Details \n Remember, a mask should only be used by health workers, caretakers, and individuals with respiratory symptoms, such as fever and cough. \n \n Before touching the mask, clean hands with an alcohol-based hand rub or soap and water \n \n Take the mask and inspect it for tears or holes \n \n Orient which side is the top side (where the metal strip is). \n \n Ensure the proper side of the mask faces outwards (the coloured side) \n \n Place the mask on your face. Pinch the metal strip or stiff edge of the mask so it moulds to the shape of your nose \n \n Pull down the mask’s bottom so it covers your mouth and your chin \n \n After use, take off the mask; remove the elastic loops from behind the ears while keeping the mask away from your face and clothes, to avoid touching potentially contaminated surfaces of the mask \n \n Discard the mask in a closed bin immediately after use \n \n Perform hand hygiene after touching or discarding the mask – Use alcohol-based hand rub or, if visibly soiled, wash your hands with soap and water"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat45",
+		"patterns" : ["Incubation period", "Incubation duration", "Incubation time", "How many days coronavirus no result", "How many days covid", "What is meant by Incubation period", "Describe Incubation period"],
+		"responses" : ["The “incubation period” means the time between catching the virus and beginning to have symptoms of the disease. Most estimates of the incubation period for COVID-19 range from 1-14 days, most commonly around five days."],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat46",
+		"patterns" : ["Animals Coronavirus humans", "Animals infect humans", "Animal HUman transmission", "pet human Transmission", "cat dog transmit", "street animals transmission", "Can animals transmit coronavirus to humans"],
+		"responses" : ["Coronaviruses are a large family of viruses that are common in animals. Occasionally, people get infected with these viruses which may then spread to other people. For example, SARS-CoV was associated with civet cats and MERS-CoV is transmitted by dromedary camels \n Recently a tiger got infected by Coronavirus \n \n To protect yourself, such as when visiting live animal markets, avoid direct contact with animals and surfaces in contact with animals. Ensure good food safety practices at all times. \n  Handle raw meat, milk or animal organs with care to avoid contamination of uncooked foods and avoid consuming raw or undercooked animal products"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat47",
+		"patterns" : ["life span virus corona", "duration of covid-19", "duration of coronavirus", "Coronavirus plastic", "coronavirus surface", "coronavirus iron", "What is the lifespan of coronavirus"],
+		"responses" : ["It is not certain how long the virus that causes COVID-19 survives on surfaces, but it seems to behave like other coronaviruses. Studies suggest that coronaviruses (including preliminary information on the COVID-19 virus) may persist on surfaces for a few hours or up to several days. This may vary under different conditions (e.g. type of surface, temperature or humidity of the environment)"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat48",
+		"patterns" : ["Coronavirus newspaper", "coronavirus letter", "coronavirus parcels", "coronavirus couriers", "Can coronavirus contaminate newspapers", "can coronavirus infected by newspaper"],
+		"responses" : ["The likelihood of an infected person contaminating commercial goods is low and the risk of catching the virus that causes COVID-19 from a package that has been moved, travelled, and exposed to different conditions and temperature is also low"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat49",
+		"patterns" : ["mobile networks spread covid-19", "5g mobile transmission Coronavirus", "mobile networks transmit Coronavirus", "Does mobile networks spread coronavirus"],
+		"responses" : ["Viruses cannot travel on radio waves/mobile networks.COVID-19 is spreading in many countries that do not have 5G mobile networks"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat50",
+		"patterns" : ["coronavirus hot sun temperature", "covid-19 prevent hot temperature", "hot temperature kill coronavirus", "Does coronavirus infect in hot and humid climate"],
+		"responses" : ["You can catch COVID-19, no matter how sunny or hot the weather is. Countries with hot weather have reported cases of COVID-19"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat51",
+		"patterns" : ["Die coronavirus", "end life coronavirus", "Suicide Coronavirus", "death coronavirus", "Is death is only way after being infected by coronavirus"],
+		"responses" : ["Most of the people who catch COVID-19 can recover and eliminate the virus from their bodies. If you catch the disease, make sure you treat your symptoms"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat52",
+		"patterns" : ["Alcohol coronavirus", "Whisky consumption covid-19 die", "Alcohol consumption kill coronavirus", "Does alcohol consumption kill covid-19"],
+		"responses" : ["Drinking alcohol does not protect you against COVID-19 and can be dangerous; Frequent or excessive alcohol consumption can increase your risk of health problems"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat53",
+		"patterns" : ["Coronavirus Transmission mosquito bites", "covid spreading from mosquito", "coronavirus transmission spreading mosquito", "Does coronavirus transmission occurs through mosquito bites"],
+		"responses" : ["The new coronavirus CANNOT be transmitted through mosquito bites", "To date there has been no information nor evidence to suggest that the new coronavirus could be transmitted by mosquitoes. The new coronavirus is a respiratory virus which spreads primarily through droplets generated when an infected person coughs or sneezes, or through droplets of saliva or discharge from the nose"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat54",
+		"patterns" : ["Hand dryers kill coronavirus", "covid-19 can be killed by hand-dryers", "coronavirus dead by hand dryers", "Does hot hand dryers kill coronavirus"],
+		"responses" : ["No. Hand dryers are not effective in killing the 2019-nCoV"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat55",
+		"patterns" : ["Ultraviolet Disinfection", "UV rays kill coronavirus", "Ultraviolet Radiation kill Covid-19", "Does UV radiation kill coronavirus"],
+		"responses" : ["UV lamps should not be used to sterilize hands or other areas of skin as UV radiation can cause skin irritation."],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat56",
+		"patterns" : ["Thermal Scanners coronavirus", "Covid-19 fever temperature using Thermal Scanners", "Are thermal scanners are effective in detective in coronavirus"],
+		"responses" : ["Thermal scanners are effective in detecting people who have developed a fever (i.e. have a higher than normal body temperature) because of infection with the new coronavirus \n \n However, they cannot detect people who are infected but are not yet sick with fever. This is because it takes between 2 and 10 days before people who are infected become sick and develop a fever"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat57",
+		"patterns" : ["Chlorine Spreading kill Coronavirus", "Alcohol on body kill covid-19", "Chlorine, Alcohol can kill coronavirus on our body", "Does chlorine , alcohol on my body will treat coronavirus"],
+		"responses" : ["No. Spraying alcohol or chlorine all over your body will not kill viruses that have already entered your body. Spraying such substances can be harmful to clothes or mucous membranes (i.e. eyes, mouth). Be aware that both alcohol and chlorine can be useful to disinfect surfaces, but they need to be used under appropriate recommendations."],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat58",
+		"patterns" : ["Garlic kill coronavirus", "Garlic prevent covid-19", "garlic help prevent infection with the new coronavirus", "Does garlic kill coronavirus"],
+		"responses" : ["Garlic is a healthy food that may have some antimicrobial properties. However, there is no evidence from the current outbreak that eating garlic has protected people from the new coronavirus"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat59",
+		"patterns" : ["Is there any treatment to coronavirus", "How all the doctors are able to cure patients of coronavirus", "How are doctors are able to treat patients infected with covid-19"],
+		"responses" : ["Currently, no antiviral medication is recommended to treat COVID-19. Self-medication is highly not recommended.Treatment is directed at relieving symptoms and may include \n\n Pain relievers (ibuprofen or acetaminophen) \n Cough syrup or medication \n Rest and enough sleep \n High fluid intake"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat60",
+		"patterns" : ["What is the recovery time for coronavirus patients ?", "how long the patients take to get completely cured ?"],
+		"responses" : ["Using available preliminary data, the median time from onset to clinical recovery for mild cases is approximately 2 weeks and is 3-6 weeks for patients with severe or critical disease"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat61",
+		"patterns" : ["what is the diet to increase immunity", "what can I eat to prevent coronavirus", "Is there any food diet so that we can reduce the catch of covid-19", "which vegetables and fruits should I take to fight against coronavirus"],
+		"responses" : ["Improve your diet by intake of large amounts of Turmeric, citrus fruits and ginger. Take large amounts of protein.Stay Hydrated, Take large amounts of water, juices and hot water is best", "As the elderly are more prone to coronavirus, a diet rich in certain vitamins and minerals can create a wall of immunity. You can include fruits and vegetables that are rich in beta-carotene, vitamin C & E and even zinc", 
+			"Superfoods like broccoli, mushrooms, and even kale are a few immunity boosters that you can include in their diet", "All kinds of berries in their diet along with foods rich in omega-3 fatty acids – beans, flax seeds, and even some nuts. This will also help in boosting their memory", 
+			"You must have 8-9 glasses of water, as that will keep Your mucous membranes moist which can further lower the chances of cold and flu. I feel soups, coconut water, milk, green tea, and even some homemade fruit juice will be helpful", "Various researches have proven that vitamin C is an important aspect of improving immunity, be it kids, adults or even elderly! Fruits like oranges, papaya, kiwi, and guava are rich in vitamin C and should be included in their diet. Also, veggies like eggplant, bell peppers, beetroots, spinach, and cauliflower are known to be quite rich in vitamin C and are good for immunity.", 
+			"Some of the immunity-boosting herbs are garlic, ginseng, black cumin and liquorice. Include them in your diet in the form for tea or by adding them in their food", "Some researchers have proven that vitamin E is vital for maintaining the overall health and  immunity. Vitamin E is a powerful antioxidant that can protect you from various infections, bacterias and viruses. Include soaked almonds, peanut butter, sunflower seeds, and even hazelnuts to get the daily dose of vitamin E", 
+			"Drink up to 8-10 glasses of water every day, to stay hydrated. Hydration will help flush out the toxins from the body and lower the chances of flu. Other alternatives include juices made of citrus fruits and coconut water, to beat the heat"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat62",
+		"patterns" : ["what Exercise should I do", "are there any techniques so that I can reduce the stress", "relieve Stress from meditation"],
+		"responses" : ["Too much stress releases the hormone known as cortisol, which impairs your response to immediate surroundings and makes your body susceptible to infections; you are left feeling constantly anxious. The best way to relieve stress is through meditation, it is a tried and tested activity to calm the nerves. Ensure that you are sleeping sufficiently.", 
+			"Certain habits like smoking, vaping, alcohol consumption and substance abuse have a direct correlation between weakened body defences and respiratory illnesses. Engaging in smoking and vaping is proven to weaken your lung capacity and destroy the cells lining your respiratory tracts, these cells are crucial to fight viruses that enter through your nasal orifices. Practice moderation, if you are dependent on any of these, as sudden withdrawal can also prove to be risky.", 
+			"Avoid all kinds of non-essential travels. Most Covid 19 positive cases are imported cases, which later spread to the communities. Avoid being exposed to the public transport system and public places to avoid any likelihood of exposure"],
+		"context_set" : "",
+		"context_filter" : ""
+	},
+	{
+		"tag" : "pat63",
+		"patterns" : ["what vitamins should I take to prevent covid-19", "what vitamins are required to cure coronavirus", "which food contains vitamins that reduce the chance of getting infected by coronavirus"],
+		"responses" : ["Do not intake vitamin tablets without prescription. \n \n Some researchers have proven that vitamin E is vital for maintaining overall health and  immunity. Vitamin E is a powerful antioxidant that can protect you from various infections, bacterias and viruses. Include soaked almonds, peanut butter, sunflower seeds, and even hazelnuts to get the daily dose of vitamin E",
+			"Do not intake vitamin tablets without prescription. \n \n Various researches have proven that vitamin C is an important aspect of improving immunity, be it kids, adults or even elderly! Fruits like oranges, papaya, kiwi, and guava are rich in vitamin C and should be included in their diet. Also, veggies like eggplant, bell peppers, beetroots, spinach, and cauliflower are known to be quite rich in vitamin C and are good for immunity.",
+			"Do not intake vitamin tablets without prescription. \n As the elderly are more prone to coronavirus, a diet rich in certain vitamins and minerals can create a wall of immunity. You can include fruits and vegetables that are rich in beta-carotene, vitamin C & E and even zinc"],
+		"context_set" : "",
+		"context_filter" : ""
+	}
+
+]
+
+}
