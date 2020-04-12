@@ -11,7 +11,7 @@ import pickle
 
 userid = "123"
 
-with open("intents.json") as file:
+with open("intents1.json") as file:
 	data = json.load(file)
 
 try:
@@ -72,7 +72,7 @@ tensorflow.reset_default_graph()
 net = tflearn.input_data(shape=[None,len(training[0])])
 net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
+#net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(output[0]), activation = "softmax")
 net = tflearn.regression(net)
 
@@ -108,30 +108,39 @@ def chat():
 			break
 
 		results = model.predict([bag_of_words(inp, words)])[0]
+		print(results)
 
-		results1 = np.array(results)
-		results1 = (results1 >= 0.4)
+		results2 = np.array(results)
+		results1 = (results2 >= 0.4).astype(int)
+		#results1 = int(results1)
+		#print(results1)
+
 		valid =[]
 		for y,r in enumerate(results1):
 			if(r == 1):
 				valid.append(labels[y])
+				#print(labels[y])
+		#print(valid)
 		for i1 in data["intents"]:
 			if i1["tag"] in valid:
+				#print("good0")
 				if "context_set" in i1:
 					context[userid] = i1["context_set"]
 
 				if not "context_filter" in i1 or (userid in context and "context_filter" in i1 and i1["context_filter"] == context[userid]):
+					#print("good1")
 					print(random.choice(i1["responses"]))  
 		
-		results_index = np.argmax(results)
+		results_index = np.argmax(results2)
 		tag = labels[results_index]
 
+		#responses = []
 		if results[results_index] > 0.7:
 			for tg in data["intents"]:
 				if tg["tag"] == tag:
+					#print(tag)
 					responses = tg["responses"]
-
-			print(random.choice(responses))
+					print(random.choice(responses))
 		else:
 			print("I didn't get that, try again.")
 
