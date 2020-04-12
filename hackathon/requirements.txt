@@ -1,0 +1,9 @@
+# Used by pip to install required python packages
+# Usage: pip install -r requirements.txt
+# If getting errors about puntk then go to python console and type
+# >>> import nltk
+# >>> nltk.download()
+# Then an installation window appears. Go to 'Models' tab and select 'puntk' under 'identifier' column. Then click Download.
+nltk==3.4.5
+tensorflow==1.14.0
+tflearn==0.3.2
