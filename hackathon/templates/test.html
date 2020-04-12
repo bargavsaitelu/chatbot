@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <title>Self Assessment</title>
+  <head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <style>
+      h1 {
+        background-color: yellow;
+        display: inline-block;
+        font-size: 3em;
+        margin: 0;
+        padding: 14px;
+      }
+      #chatbox {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        margin-top: 60px;
+      }
+      #userInput {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 60px;
+      }
+      #textInput {
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid black;
+        font-size: 20px;
+      }
+      
+      #tidbit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+      }
+      /*.alert{
+        display: inline-block;
+      }*/
+  body {
+  
+}
+}
+      
+    </style> -->
+  </head>
+  <body >
+    
+    <div class="container">
+      <br>
+      <center>
+    <div class="alert alert-info text-center" >
+      <h2>
+  Please tick the checkbox if your answer is "YES"
+      </h2>
+     </div>
+       
+      </center>
+      
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="shadow p-2 mb-3 alert alert-success"><h3><font size="4">
+       <form action="/test" method="post">
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked1" name="a">
+           <label class="custom-control-label" for="defaultChecked1">Is your age less than 18?</label>
+         </div>
+         <br>
+          <h3><font size="4">Do you have any of the following symptoms?</font></h3>
+          <br>
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked2" name="b">
+           <label class="custom-control-label" for="defaultChecked2">Fever,cough,or shortness of breath*</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked3" name="c">
+           <label class="custom-control-label" for="defaultChecked3">Fever</label>
+         </div>
+         <br>
+        
+        <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked4" name="d">
+           <label class="custom-control-label" for="defaultChecked4">Cough</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked5" name="e">
+           <label class="custom-control-label" for="defaultChecked5">Shortness of Breath</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked6" name="f">
+           <label class="custom-control-label" for="defaultChecked6">Myalgia</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked7" name="g">
+           <label class="custom-control-label" for="defaultChecked7">Runny nose</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked8" name="h">
+           <label class="custom-control-label" for="defaultChecked8">Sore throat</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked9" name="i">
+           <label class="custom-control-label" for="defaultChecked9">Headache</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked10" name="j">
+           <label class="custom-control-label" for="defaultChecked10">Nausea/Vomiting</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked11" name="k">
+           <label class="custom-control-label" for="defaultChecked11">Abdominal Pain</label>
+         </div>
+         <br>
+
+         <div class="custom-control custom-checkbox">
+           <input type="checkbox" class="custom-control-input" id="defaultChecked12" name="l">
+           <label class="custom-control-label" for="defaultChecked12">Diarrhea</label>
+         </div>
+         
+          <h3><font size="4">* Multiple symptoms</font></h3>
+      
+     </font></h3></div>
+        </div>
+      </div>
+      <br>
+      <center>
+      <input type = "submit" class="btn btn-outline-danger" value="Submit">  
+      </center>
+       </form>
+      <br>
+      <div class="row">
+      <div class="col-md-2">
+        <div class="alert alert-warning" >
+      <h2>Result</h2>
+     </div>
+   </div>
+
+      <div class="col-md-10">
+      <div class="alert alert-danger" >
+      <h2>
+  {{ text }}
+      </h2>
+     </div>
+  
+      </div>
+     </div>
+    </div>
+ 
+  </body>
+</html>
