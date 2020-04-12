@@ -100,7 +100,7 @@
 	},
 	{
 		"tag" : "pat15",
-		"patterns" : ["Are you Angry ; Are you ; you are ; you were"],
+		"patterns" : ["Are you Angry", "Are you", "you are", "you were"],
 		"responses" : ["No, I’m just Doct_chatbot here. Always happy to help !!"],
 		"context_set" : "",
 		"context_filter" : ""
@@ -108,7 +108,7 @@
 	{
 		"tag" : "pat16",
 		"patterns" : ["Do you learn", "Can you learn", "will you learn ?", "are you capable of learning", "Do you get smarter ?"],
-		"responses" : ["Of Course, I can !", "I learnt, I’m learning, I will learn !!", "Test me!"],
+		"responses" : ["No but I will get updated"],
 		"context_set" : "",
 		"context_filter" : ""
 	},
@@ -198,10 +198,9 @@
 	},
 	{
 		"tag" : "pat29",
-		"patterns" : ["what Symptoms covid-19", "symptoms  Coronavirus of Covid-19", "what are the symptoms of coronavirus", "what are the symptoms of covid-19"],
+		"patterns" : ["what Symptoms covid-19", "symptoms  Coronavirus of Covid-19", "what are the symptoms of coronavirus", "what are the symptoms of covid-19", "whether I have coronavirus"],
 		"responses" : ["The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don't feel unwell \n If u feel unwell go on to say your Symptoms I can say what is the cause"],
-		"context_set" : "",
-		"context_filter" : ""
+		"context_set" : "symptoms asked(29)"
 	},
 	{
 		"tag" : "pat30",
@@ -448,6 +447,12 @@
 			"Do not intake vitamin tablets without prescription. \n As the elderly are more prone to coronavirus, a diet rich in certain vitamins and minerals can create a wall of immunity. You can include fruits and vegetables that are rich in beta-carotene, vitamin C & E and even zinc"],
 		"context_set" : "",
 		"context_filter" : ""
+	},
+	{
+		"tag" : "pat64",
+		"patterns" : [],
+		"responses" : ["The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don't feel unwell \n If u feel unwell go on to say your Symptoms I can say what is the cause"],
+		"context_filter" : "symptoms asked(29)"
 	}
 
 ]
