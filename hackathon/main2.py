@@ -1,7 +1,6 @@
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
-
 import numpy as np
 import tflearn
 import tensorflow
@@ -17,6 +16,7 @@ with open("intents1.json") as file:
 try:
 	with open("data.pickle", "rb") as f:
 	 	words, labels, training, output = pickle.load(f)
+	 	#print(labels)
 except:
 	words = []
 	labels= []
@@ -36,7 +36,7 @@ except:
 	words = [stemmer.stem(w.lower()) for w in words if w != "?"] #stemmer reduces similar words into a single word
 	words = sorted(list(set(words))) #set makes sure it doesn't have duplicates
 
-	labels = sorted(labels)
+	#labels = sorted(labels)
 
 	training = []
 	output   = []
@@ -70,8 +70,8 @@ except:
 tensorflow.reset_default_graph()
 
 net = tflearn.input_data(shape=[None,len(training[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 16)
+net = tflearn.fully_connected(net, 16)
 #net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(output[0]), activation = "softmax")
 net = tflearn.regression(net)
@@ -91,12 +91,17 @@ def bag_of_words(s, words):
 	s_words = nltk.word_tokenize(s)
 	s_words = [stemmer.stem(word.lower()) for word in s_words]
 
+	small_len = np.array([len(s) for s in s_words])
+	small_words = (small_len > 2).astype(int)
+	small_words = small_words
+	sums = np.sum(small_words)
+
 	for se in s_words:
 		for i,w in enumerate(words):
 			if w == se:
 				bag[i] = 1
 
-	return np.array((bag))
+	return np.array((bag)),sums
 
 
 context = {}
@@ -107,20 +112,29 @@ def chat():
 		if stemmer.stem(inp.lower()) == "quit":
 			break
 
-		results = model.predict([bag_of_words(inp, words)])[0]
-		print(results)
+		bagof,sums = bag_of_words(inp, words)
+		results = model.predict([bagof])[0]
+		#print(results)
 
 		results2 = np.array(results)
-		results1 = (results2 >= 0.4).astype(int)
+		results1 = (results2 >= 0.25).astype(int)
 		#results1 = int(results1)
 		#print(results1)
 
 		valid =[]
 		for y,r in enumerate(results1):
 			if(r == 1):
-				valid.append(labels[y])
+				#print(y)
+				#print(results2[y])
+				#print(int(labels[y][3:]))
+				#print(sums)
+				if(sums != 0 or int(labels[y][3:]) < 28):
+					valid.append(labels[y])
 				#print(labels[y])
 		#print(valid)
+		
+
+		abc = 0
 		for i1 in data["intents"]:
 			if i1["tag"] in valid:
 				#print("good0")
@@ -130,19 +144,27 @@ def chat():
 				if not "context_filter" in i1 or (userid in context and "context_filter" in i1 and i1["context_filter"] == context[userid]):
 					#print("good1")
 					print(random.choice(i1["responses"]))  
+					abc = 1
+
+		if(not valid):
+			print("I didn't get that, try again.")
+			abc = 2
+		if(abc == 0):
+			print("I didn't get that, try again.")
+
 		
 		results_index = np.argmax(results2)
 		tag = labels[results_index]
 
 		#responses = []
-		if results[results_index] > 0.7:
-			for tg in data["intents"]:
-				if tg["tag"] == tag:
-					#print(tag)
-					responses = tg["responses"]
-					print(random.choice(responses))
-		else:
-			print("I didn't get that, try again.")
+		# if results[results_index] > 0.7:
+		# 	for tg in data["intents"]:
+		# 		if tg["tag"] == tag:
+		# 			#print(tag)
+		# 			responses = tg["responses"]
+		# 			print(random.choice(responses))
+		# else:
+		# 	print("I didn't get that, try again.")
 
 chat()
 #print(docs)
