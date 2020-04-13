@@ -12,6 +12,8 @@ If you are running it for the first time then
 If you have already run main.py once then
 >>python3 app.py
 
+Then Open localhost http://127.0.0.1:5000/ in your browser
+
 Look at requirements.txt for required versions of packages
 
 #Some instructions about the bot
