@@ -105,14 +105,16 @@ def bag_of_words(s, words):
 
 asked_q = []
 context = {}
-resp = ["Why are you asking the same question again?! :|","Mate,you have asked it recently,please ask any other",":( I am not that dumb you have asked it recently,get any other"]
+resp = ["Mate,you have asked it recently,please ask any other",":( I am not that dumb you have asked it recently,get any other"]
 
-def chat():
-	print("Start talking with the bot (type quit to stop)!")
+def chat(msg):
+	#print("Start talking with the bot (type quit to stop)!")
+	#flag = True
 	while True:
-		inp = input("You: ")
-		if stemmer.stem(inp.lower()) == "quit":
-			break
+		inp = msg
+		low = stemmer.stem(inp.lower())
+		if low == "quit" or low == "bye":
+			return ""
 
 		bagof,sums = bag_of_words(inp, words)
 		results = model.predict([bagof])[0]
@@ -139,7 +141,7 @@ def chat():
 		if results3 in asked_q:
 			valid = []
 			ab = 1
-			print(random.choice(resp))
+			return random.choice(resp)
 		else:
 			asked_q.append(results3)
 
@@ -155,18 +157,18 @@ def chat():
 
 				if not "context_filter" in i1 or (userid in context and "context_filter" in i1 and i1["context_filter"] == context[userid]):
 					#print("good1")
-					print(random.choice(i1["responses"]))  
+					return random.choice(i1["responses"])  
 					abc = 1
 
 		if((not valid) and (ab == 0)):
-			print("I didn't get that, try again.")
+			return "I didn't get that, try again."
 			abc = 2
 		if((abc == 0) and (ab == 0)):
-			print("I didn't get that, try again.")
+			return "I didn't get that, try again."
 
 		
-		results_index = np.argmax(results2)
-		tag = labels[results_index]
+		#results_index = np.argmax(results2)
+		#tag = labels[results_index]
 
 		#responses = []
 		# if results[results_index] > 0.7:
@@ -178,7 +180,7 @@ def chat():
 		# else:
 		# 	print("I didn't get that, try again.")
 
-chat()
+#chat()
 #print(docs)
 #print(wrds)
 #print(labels)
