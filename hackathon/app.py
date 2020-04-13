@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,request,redirect
-
+from main1 import*
 app = Flask(__name__)
 
 @app.route('/<name>')
@@ -75,55 +75,69 @@ def test():
 lp = [73,56,54,13,23,7.2,24,28,11,5.8,13]
 la = [93,71,80,43,61,6.9,35,58,16,12,31]
 
-a1 = "The chances of having the pandemic is high and I prefer you must consult a doctor"
-a2 = " and make sure that you maintain a safe distance from others."
+# a1 = "The chances of having the pandemic is high and I prefer you must consult a doctor"
+# a2 = " and make sure that you maintain a safe distance from others."
 
-b1 = "The chances of having the pandemic is not so high,so I prefer you to be in home"
-b2 = " quarantine for 14 days and if it gets worse in middle,you better consult a doctor."
+# b1 = "The chances of having the pandemic is not so high,so I prefer you to be in home"
+# b2 = " quarantine for 14 days and if it gets worse in middle,you better consult a doctor."
 
-c1 = "The chances of having the pandemic are low, so take rest for some days and if it"
-c2 = " still persists, consult a doctor."
+# c1 = "The chances of having the pandemic are low, so take rest for some days and if it"
+# c2 = " still persists, consult a doctor."
 
-d1 = "The chances of having the pandemic are little, you can take rest for some days"
-d2 = " and if it still persists take necessary precautions and diet."
+# d1 = "The chances of having the pandemic are little, you can take rest for some days"
+# d2 = " and if it still persists take necessary precautions and diet."
 
-common1 = "\n"+"        PLEASE MAINTAIN SOCIAL DISTANCING AND WEAR A MASK"
-common2 = "\n"+"        PLEASE MAINTAIN SOCIAL DISTANCING"
+common1 = "\n"+"        Maintain Social Distancing and do wear a mask to prevent spreading"
+common2 = "\n"+"        Call the Helpline Number :+91-11-23978046 for any help"
 
-a = a1+a2+common1
-b = b1+b2+common1
-c = c1+c2+common2
-d = d1+d2+common2
+# a = a1+a2+common1
+# b = b1+b2+common1
+# c = c1+c2+common2
+# d = d1+d2+common2
 
+a1 = "You have a high risk of being infected. Please consult your nearest hospital. Don't worry because about 1 out of 5 cases will likely have serious illness. It's a mild infection for young ones. Maintain your cool and be confident."
+a2 = "You have a high risk of being infected. Please consult your nearest hospital immedialtely and follow the protocol."
+
+b1 = "Chances of virus residing in you is low but risk of exposure for one is high. We recommend you to self isolate yourself and take good care of your health. Try taking good food to boost your immunity."
+
+c1 = "Chances of you being infected is very little. But take preventive measures as it's more likely for virus to attack on you when your immune system is down. Self-quarantine yourself."
+
+d1 = "You have of low risk of being infected. So yay! for that and sef quarantine yourself in y home."
 @app.route('/test/result')
 def result(age,symps):
 	if(age < 18):
 		if (73 in symps) or (56 in symps) or (54 in symps):
-			return print_result(a)
+			return print_result(a1+common2)
 		elif (23 in symps) or (24 in symps) or (28 in symps):
-			return print_result(b)
+			return print_result(b1+common1)
 		elif len(symps) == 3:
-			return print_result(b)
+			return print_result(b1+common1+common2)
 		else:
-			return print_result(c)
+			return print_result(c1+common1)
 
 
 
 	else:
 		if (93 in symps) or (71 in symps) or (80 in symps) or (43 in symps) or (61 in symps) or (58 in symps):
-			return print_result(a)
+			return print_result(a2+common1+common2)
 		elif (35 in symps) or (31 in symps):
-			return print_result(b)
+			return print_result(b1+common1+common2)
 		elif (16 in symps) and ((6.9 in symps) or (12 in symps)):
-			return print_result(c)
+			return print_result(c1+common1)
 		else:
-			return print_result(d)
+			return print_result(d1+common1)
 
 # print(assesment(14,[13,23]))
 
 @app.route('/test/result')
 def print_result(txt):
 	return render_template('test.html',text=txt)
+
+@app.route("/get")
+def get_bot_response():
+	msg = request.args.get('msg')
+	reply = chat(msg)
+	return reply
 
 if __name__=="__main__":
 	app.run(debug=True)
