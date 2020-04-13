@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/bargav07/flasktut/model.tflearn"
+all_model_checkpoint_paths: "/home/bargav07/flasktut/model.tflearn"
