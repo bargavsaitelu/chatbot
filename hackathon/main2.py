@@ -7,10 +7,12 @@ import tensorflow
 import random
 import json
 import pickle
+import warnings 
+warnings.filterwarnings("ignore")
 
 userid = "123"
 
-with open("intents1.json") as file:
+with open("intents.json") as file:
 	data = json.load(file)
 
 try:
@@ -92,7 +94,7 @@ def bag_of_words(s, words):
 	s_words = [stemmer.stem(word.lower()) for word in s_words]
 
 	small_len = np.array([len(s) for s in s_words])
-	small_words = (small_len > 2).astype(int)
+	small_words = (small_len > 3).astype(int)
 	small_words = small_words
 	sums = np.sum(small_words)
 
@@ -105,7 +107,7 @@ def bag_of_words(s, words):
 
 asked_q = []
 context = {}
-resp = ["Mate,you have asked it recently,please ask any other",":( I am not that dumb you have asked it recently,get any other"]
+resp = ["Mate,you have asked it recently,please ask any other","Please change your query, you have asked it just before","You have made a similar statement before,please change it"]
 
 def chat(msg):
 	#print("Start talking with the bot (type quit to stop)!")
@@ -113,7 +115,9 @@ def chat(msg):
 	while True:
 		inp = msg
 		low = stemmer.stem(inp.lower())
-		if low == "quit" or low == "bye":
+		if low == "":
+			return "Please ask something,I am here to chat with you :)"
+		if low == "quit" or low == "bye" or low == "good bye" or low == "goodbye":
 			return ""
 
 		bagof,sums = bag_of_words(inp, words)
@@ -142,7 +146,7 @@ def chat(msg):
 			valid = []
 			ab = 1
 			return random.choice(resp)
-		else:
+		elif 1 in results3:
 			asked_q.append(results3)
 
 		if(len(asked_q) > 5):
@@ -159,28 +163,10 @@ def chat(msg):
 					#print("good1")
 					return random.choice(i1["responses"])  
 					abc = 1
+		notget = ["I didn't get you, Can you rephrase your statement or ask another","Oops!! looks like you got me in trouble understanding you ,can you ask again :)"]
 
 		if((not valid) and (ab == 0)):
-			return "I didn't get that, try again."
+			return random.choice(notget)
 			abc = 2
 		if((abc == 0) and (ab == 0)):
-			return "I didn't get that, try again."
-
-		
-		#results_index = np.argmax(results2)
-		#tag = labels[results_index]
-
-		#responses = []
-		# if results[results_index] > 0.7:
-		# 	for tg in data["intents"]:
-		# 		if tg["tag"] == tag:
-		# 			#print(tag)
-		# 			responses = tg["responses"]
-		# 			print(random.choice(responses))
-		# else:
-		# 	print("I didn't get that, try again.")
-
-#chat()
-#print(docs)
-#print(wrds)
-#print(labels)
+			return random.choice(notget)
