@@ -8,7 +8,9 @@ import tensorflow
 import random
 import json
 import pickle
-
+import warnings 
+warnings.filterwarnings("ignore")
+userid="123"
 with open("intents.json") as file:
 	data = json.load(file)
 
@@ -68,8 +70,8 @@ with open("data.pickle", "wb") as f:
 tensorflow.reset_default_graph()
 
 net = tflearn.input_data(shape=[None,len(training[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
+net = tflearn.fully_connected(net, 100)
+net = tflearn.fully_connected(net, 100)
 net = tflearn.fully_connected(net, len(output[0]), activation = "softmax")
 net = tflearn.regression(net)
 
@@ -80,58 +82,3 @@ model = tflearn.DNN(net)
 # except:
 model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
 model.save("model.tflearn")
-
-
-def bag_of_words(s, words):
-	bag = [0 for _ in range(len(words))]
-
-	s_words = nltk.word_tokenize(s)
-	s_words = [stemmer.stem(word.lower()) for word in s_words]
-
-	for se in s_words:
-		for i,w in enumerate(words):
-			if w == se:
-				bag[i] = 1
-
-	return np.array((bag))
-
-
-def chat():
-	print("Start talking with the bot (type quit to stop)!")
-	while True:
-		inp = input("You: ")
-		if stemmer.stem(inp.lower()) == "quit":
-			break
-
-		results = model.predict([bag_of_words(inp, words)])[0]
-
-		results1 = np.array(results)
-		results1 = (results1 >= 0.4)
-		valid =[]
-		for y,r in enumerate(results1):
-			if(r == 1):
-				valid.append(labels[y])
-		for i1 in data["intents"]:
-			if i1["tag"] in valid:
-				if "context_set" in i1:
-					context[userid] = i1["context_set"]
-
-				if not "context_filter" in i1 or (userid in context and "context_filter" in i1 and i1["context_filter"] == context[userid]):
-					print(random.choice(i1["responses"])) 
-					
-		results_index = np.argmax(results)
-		tag = labels[results_index]
-
-		if results[results_index] > 0.7:
-			for tg in data["intents"]:
-				if tg["tag"] == tag:
-					responses = tg["responses"]
-
-			print(random.choice(responses))
-		else:
-			print("I didn't get that, try again.")
-
-chat()
-#print(docs)
-#print(wrds)
-#print(labels)
