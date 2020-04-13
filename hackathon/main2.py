@@ -1,3 +1,5 @@
+import warnings 
+warnings.filterwarnings("ignore")
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
@@ -7,8 +9,7 @@ import tensorflow
 import random
 import json
 import pickle
-import warnings 
-warnings.filterwarnings("ignore")
+
 
 userid = "123"
 
