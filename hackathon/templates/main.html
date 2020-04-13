@@ -41,78 +41,57 @@
         right: 0;
         width: 300px;
       }
-      /*.alert{
-        display: inline-block;
-        width: 100%;
-        float: right;
-        text-align: right;
-
-      }*/
-      /*.shadow{
-          display: inline-block;
-          float: left;
-          text-align: left;
-        }*/
-        .botclass{
+      .botclass{
           display: inline-block;
           float: left;
           text-align: left;
         }
-        .userclass{
+      .userclass{
         display: inline-block;
         /*width: 100%;*/
         float: right;
         text-align: right;
 
       }
-
-
-
-  body {
- 
-  background-color: #F2F3F4     ;
-  
+      body {
+        background-color: #F2F3F4     ;
+  }
 }
-}
-      
-    </style>
+  </style>
   </head>
+  
   <body >
     
     <div class="container">
       <br>
       <center>
     <div class="shadow p-2 mb-5 alert alert-info  rounded text-center" >
-      <h2>
-  To make sure you are in good health <a href="test" target="_blank" style="color:#FF5733 ;">Click Here</a> 
+      <h2>To make sure you are in good health <a href="test" target="_blank" style="color:#FF5733 ;">Click Here</a> 
       </h2>
-      
     </div>
     </center>
+      
       <div>
         <div id="chatbox">
           <div class="row justify-content-start">
             <div class="col-8">
               <div class="botclass">
-              <div class="shadow p-1 mb-3 alert alert-danger  rounded text-center" >
-            <h3><font size="4">Hi! Nice to meet you {{ name }} </font>
-            </h3>
-            </div>  
+                <div class="shadow p-1 mb-3 alert alert-danger  rounded text-center" >
+                <h3><font size="4">Hi! Nice to meet you {{ name }} </font>
+                </h3>
+                </div>  
               </div>
-              
             </div>
           </div>
-                
         </div>
+
         <div id="userInput" >
-          <!-- <input id="textInput" type="text" name="msg" placeholder="Message" /> -->
           <form>
-    <div class="form-group ">
-      <!-- <label for="name">Name</label> -->
-      <br>
-      <input id="textInput" type="text" name="msg" placeholder="Type here..." required class="form-control">
-    </div>
-  </form>
+            <div class="form-group ">
+              <br>
+              <input id="textInput" type="text" name="msg" placeholder="Type here..." required class="form-control">
+            </div>
+          </form>
         </div>
       </div>
 
@@ -127,13 +106,24 @@
             .getElementById("userInput")
             .scrollIntoView({ block: "start", behavior: "smooth" });
           $.get("/get", { msg: rawText }).done(function(data) {
-            if(rawText !=""){
+            if(rawText != '') {
+            if (data != '') {
             var botHtml = '<div class="row justify-content-start"><div class="col-8"><div class="botclass"><div class="shadow p-1 mb-3 alert alert-danger rounded text-left"><h3><font size="4">' + data + "</font></h3></div></div></div></div>";
             $("#chatbox").append(botHtml);
-            document
+          } 
+          else {
+            var botHtml = '<div class="row justify-content-start"><div class="col-8"><div class="botclass"><div class="shadow p-1 mb-3 alert alert-danger rounded text-left"><h3><font size="4">' + "Good bye, Take care" + "</font></h3></div></div></div></div>";
+            $("#chatbox").append(botHtml);
+            setTimeout(red, 1500);
+          }
+        }
+        document
               .getElementById("userInput")
               .scrollIntoView({ block: "start", behavior: "smooth" });
-          }});
+      });
+        }
+        function red(){
+          location.href = "http://127.0.0.1:5000/";
         }
         $("#textInput").keypress(function(e) {
           if (e.which == 13) {
