@@ -84,7 +84,7 @@
       <center>
     <div class="shadow p-2 mb-5 alert alert-info  rounded text-center" >
       <h2>
-  For Health Checkup <a href="test" target="_blank">Click Here</a> 
+  To make sure you are in good health <a href="test" target="_blank" style="color:#FF5733 ;">Click Here</a> 
       </h2>
       
     </div>
@@ -92,7 +92,7 @@
       <div>
         <div id="chatbox">
           <div class="row justify-content-start">
-            <div class="col-6">
+            <div class="col-8">
               <div class="botclass">
               <div class="shadow p-1 mb-3 alert alert-danger  rounded text-center" >
             <h3><font size="4">Hi! Nice to meet you {{ name }} </font>
@@ -119,7 +119,7 @@
       <script>
         function getBotResponse() {
           var rawText = $("#textInput").val();
-          var userHtml = '<div class="row justify-content-end"><div class="col-6"><div class="userclass"><div class="shadow p-1 mb-3 alert alert-warning rounded text-right"><h3><font size="4">' + rawText + "</font></h3></div></div></div></div>";
+          var userHtml = '<div class="row justify-content-end"><div class="col-8"><div class="userclass"><div class="shadow p-1 mb-3 alert alert-warning rounded text-right"><h3><font size="4">' + rawText + "</font></h3></div></div></div></div>";
           
           $("#textInput").val("");
           if(rawText != '')$("#chatbox").append(userHtml);
@@ -127,12 +127,13 @@
             .getElementById("userInput")
             .scrollIntoView({ block: "start", behavior: "smooth" });
           $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<div class="alert alert-primary"><h3><font size="4">' + data + "</font></h3></div>";
+            if(rawText !=""){
+            var botHtml = '<div class="row justify-content-start"><div class="col-8"><div class="botclass"><div class="shadow p-1 mb-3 alert alert-danger rounded text-left"><h3><font size="4">' + data + "</font></h3></div></div></div></div>";
             $("#chatbox").append(botHtml);
             document
               .getElementById("userInput")
               .scrollIntoView({ block: "start", behavior: "smooth" });
-          });
+          }});
         }
         $("#textInput").keypress(function(e) {
           if (e.which == 13) {
