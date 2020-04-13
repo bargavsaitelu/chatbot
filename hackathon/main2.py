@@ -70,8 +70,8 @@ except:
 tensorflow.reset_default_graph()
 
 net = tflearn.input_data(shape=[None,len(training[0])])
-net = tflearn.fully_connected(net, 16)
-net = tflearn.fully_connected(net, 16)
+net = tflearn.fully_connected(net, 100)
+net = tflearn.fully_connected(net, 100)
 #net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(output[0]), activation = "softmax")
 net = tflearn.regression(net)
@@ -87,7 +87,7 @@ except:
 
 def bag_of_words(s, words):
 	bag = [0 for _ in range(len(words))]
-
+	#print(len(words))
 	s_words = nltk.word_tokenize(s)
 	s_words = [stemmer.stem(word.lower()) for word in s_words]
 
@@ -103,8 +103,10 @@ def bag_of_words(s, words):
 
 	return np.array((bag)),sums
 
-
+asked_q = []
 context = {}
+resp = ["Why are you asking the same question again?! :|","Mate,you have asked it recently,please ask any other",":( I am not that dumb you have asked it recently,get any other"]
+
 def chat():
 	print("Start talking with the bot (type quit to stop)!")
 	while True:
@@ -118,10 +120,11 @@ def chat():
 
 		results2 = np.array(results)
 		results1 = (results2 >= 0.25).astype(int)
+		results3 = list(results1)
 		#results1 = int(results1)
 		#print(results1)
-
 		valid =[]
+		
 		for y,r in enumerate(results1):
 			if(r == 1):
 				#print(y)
@@ -132,7 +135,16 @@ def chat():
 					valid.append(labels[y])
 				#print(labels[y])
 		#print(valid)
-		
+		ab = 0
+		if results3 in asked_q:
+			valid = []
+			ab = 1
+			print(random.choice(resp))
+		else:
+			asked_q.append(results3)
+
+		if(len(asked_q) > 5):
+			asked_q.pop(0)
 
 		abc = 0
 		for i1 in data["intents"]:
@@ -146,10 +158,10 @@ def chat():
 					print(random.choice(i1["responses"]))  
 					abc = 1
 
-		if(not valid):
+		if((not valid) and (ab == 0)):
 			print("I didn't get that, try again.")
 			abc = 2
-		if(abc == 0):
+		if((abc == 0) and (ab == 0)):
 			print("I didn't get that, try again.")
 
 		
