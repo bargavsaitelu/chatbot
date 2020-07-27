@@ -1,5 +1,4 @@
-# Covid19_hackathon
-Project done as a part of hackathon conducted by hackerearth
+# Chatbot
 
 This is a chatbot for Covid-19
 
